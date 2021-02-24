@@ -7,16 +7,23 @@
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "GeekWx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juunegreiros/nodejs-api-rest.git"
+  },
+  "author": "juliana negreiros",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juunegreiros/nodejs-api-rest/issues"
+  },
+  "homepage": "https://github.com/juunegreiros/nodejs-api-rest#readme",
   "dependencies": {
-    "body-parse": "^0.1.0",
-    "body-parser": "^1.19.0",
     "consign": "^0.1.6",
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "moment": "^2.29.1",
+    "mysql": "^2.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^1.19.2"
   }
 }
