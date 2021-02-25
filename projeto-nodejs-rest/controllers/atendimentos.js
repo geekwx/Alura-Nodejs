@@ -14,7 +14,7 @@ module.exports = app => {
 
     app.post('/atendimentos', (req, res) => {
         const atendimento = req.body
-        
+        console.log(req.body)
         Atendimento.adiciona(atendimento, res)
         
     })
@@ -24,5 +24,11 @@ module.exports = app => {
         const valores = req.body
 
         Atendimento.altera(id, valores, res)
+    })
+
+    app.delete('/atendimentos/:id', (req, res) => {
+        const id = parseInt(req.params.id)
+
+        Atendimento.deleta(id, res)
     })
 }
