@@ -6,7 +6,7 @@ const repositorio = require('../repositorios/atendimento')
 class Atendimento {
     constructor(){
         this.dataEhValida = ({data, dataCriacao}) => moment(data).isSameOrAfter(dataCriacao)
-        this.clienteEhValido = (tamanho) => tamanho >= 5
+        this.clienteEhValido = (tamanho) => tamanho > 1
         this.valida = (parametros) => this.validacoes.filter(campo => {
             const { nome} = campo
             const parametro = parametros[nome]
@@ -32,8 +32,8 @@ class Atendimento {
 
     }
     adiciona(atendimento) {
-        const dataCriacao = moment().format('YYYY-MM-DD HH:MM:SS')
-        const data = moment(atendimento.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:MM:SS')
+        const dataCriacao = moment().format('YYYY-MM-DD HH:MM')
+        const data = moment(atendimento.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:MM')
        
         const parametros = {
             data: {data, dataCriacao},
